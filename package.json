@@ -1,0 +1,18 @@
+{
+  "name": "codebound-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test kit for the CODEBOUND challenge (Black Forest Hackathon 2026): mock systems, reference answers and an acceptance checker for AnythingMCP scripts.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "mocks": "docker compose -f compose/mocks.yml up -d --build",
+    "mocks:down": "docker compose -f compose/mocks.yml down -v",
+    "setup": "node harness/cli.mjs setup",
+    "check": "node harness/cli.mjs check",
+    "cards": "node harness/cli.mjs cards",
+    "expected": "node scripts/generate-expected.mjs",
+    "test": "node --test \"test/*.test.mjs\""
+  }
+}

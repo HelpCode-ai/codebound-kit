@@ -1,0 +1,53 @@
+# CODEBOUND mock APIs.
+#
+#   docker compose -f compose/mocks.yml up -d --build
+#
+# Starts the four mock systems (ERP, Supplier, Carrier, Payroll) and a fifth
+# host that no script is allowed to reach. Ports are published on 127.0.0.1 so
+# a backend started with `npm run dev` reaches them as localhost:41xx, and the
+# `codebound` network lets a backend running in Docker reach them by name.
+
+name: codebound
+
+services:
+  mocks:
+    build: ../mocks
+    image: codebound-mocks:1
+    container_name: codebound-mocks
+    environment:
+      - MODE=mocks
+    ports:
+      - "127.0.0.1:4101:4101" # ERP
+      - "127.0.0.1:4102:4102" # Supplier
+      - "127.0.0.1:4103:4103" # Carrier
+      - "127.0.0.1:4104:4104" # Payroll
+      - "127.0.0.1:4180:4180" # admin: request log, credentials (checker only)
+    volumes:
+      - mocks_data:/data
+    networks:
+      codebound:
+        aliases: [codebound-erp, codebound-supplier, codebound-carrier, codebound-payroll]
+    restart: unless-stopped
+
+  # A separate container on purpose: it must have its own IP, so a sandbox
+  # that allowlists by address cannot reach it by accident of sharing one.
+  outside:
+    build: ../mocks
+    image: codebound-mocks:1
+    container_name: codebound-outside
+    environment:
+      - MODE=outside
+    ports:
+      - "127.0.0.1:4199:4199"
+      - "127.0.0.1:4181:4181" # admin: request log (checker only)
+    networks:
+      codebound:
+        aliases: [codebound-outside]
+    restart: unless-stopped
+
+volumes:
+  mocks_data:
+
+networks:
+  codebound:
+    name: codebound

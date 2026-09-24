@@ -1,0 +1,63 @@
+{
+  "workspace": "A",
+  "calls": [
+    {
+      "args": {
+        "days": 3,
+        "as_of": "2026-10-16T12:00:00.000Z"
+      },
+      "result": [
+        {
+          "orderNo": "A-ORD-00095",
+          "trackingNo": "ATRK000048",
+          "status": "in_transit",
+          "lastScanAt": "2026-10-07T21:00:00.000Z"
+        },
+        {
+          "orderNo": "A-ORD-00063",
+          "trackingNo": "ATRK000032",
+          "status": "in_transit",
+          "lastScanAt": "2026-10-08T01:00:00.000Z"
+        },
+        {
+          "orderNo": "A-ORD-00047",
+          "trackingNo": "ATRK000024",
+          "status": "exception",
+          "lastScanAt": "2026-10-10T20:00:00.000Z"
+        },
+        {
+          "orderNo": "A-ORD-00009",
+          "trackingNo": "ATRK000005",
+          "status": "in_transit",
+          "lastScanAt": "2026-10-11T07:00:00.000Z"
+        },
+        {
+          "orderNo": "A-ORD-00023",
+          "trackingNo": "ATRK000012",
+          "status": "exception",
+          "lastScanAt": "2026-10-12T03:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "args": {
+        "days": 7,
+        "as_of": "2026-10-16T12:00:00.000Z"
+      },
+      "result": [
+        {
+          "orderNo": "A-ORD-00095",
+          "trackingNo": "ATRK000048",
+          "status": "in_transit",
+          "lastScanAt": "2026-10-07T21:00:00.000Z"
+        },
+        {
+          "orderNo": "A-ORD-00063",
+          "trackingNo": "ATRK000032",
+          "status": "in_transit",
+          "lastScanAt": "2026-10-08T01:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

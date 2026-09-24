@@ -1,0 +1,55 @@
+{
+  "workspace": "A",
+  "calls": [
+    {
+      "args": {
+        "threshold": 5
+      },
+      "result": [
+        {
+          "sku": "A-10234",
+          "purchasePrice": 221.41,
+          "supplierPrice": 261.26,
+          "driftPct": 18
+        },
+        {
+          "sku": "A-10018",
+          "purchasePrice": 179.84,
+          "supplierPrice": 202.32,
+          "driftPct": 12.5
+        },
+        {
+          "sku": "A-10302",
+          "purchasePrice": 117.98,
+          "supplierPrice": 127.3,
+          "driftPct": 7.9
+        },
+        {
+          "sku": "A-10059",
+          "purchasePrice": 111.82,
+          "supplierPrice": 118.75,
+          "driftPct": 6.2
+        }
+      ]
+    },
+    {
+      "args": {
+        "threshold": 10
+      },
+      "result": [
+        {
+          "sku": "A-10234",
+          "purchasePrice": 221.41,
+          "supplierPrice": 261.26,
+          "driftPct": 18
+        },
+        {
+          "sku": "A-10018",
+          "purchasePrice": 179.84,
+          "supplierPrice": 202.32,
+          "driftPct": 12.5
+        }
+      ]
+    }
+  ]
+}

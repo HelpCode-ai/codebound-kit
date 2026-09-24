@@ -1,0 +1,12 @@
+{
+  "workspace": "A",
+  "calls": [
+    {
+      "args": {},
+      "result": {
+        "accountName": "Alpha Hardware GmbH",
+        "customerNo": "A-CUST-4711"
+      }
+    }
+  ]
+}

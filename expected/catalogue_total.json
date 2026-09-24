@@ -1,0 +1,35 @@
+{
+  "workspace": "A",
+  "calls": [
+    {
+      "args": {
+        "category": "fasteners"
+      },
+      "result": {
+        "category": "fasteners",
+        "total": 800,
+        "complete": true
+      }
+    },
+    {
+      "args": {
+        "category": "adhesives"
+      },
+      "result": {
+        "category": "adhesives",
+        "total": 137,
+        "complete": true
+      }
+    },
+    {
+      "args": {
+        "category": "legacy"
+      },
+      "result": {
+        "category": "legacy",
+        "total": 200,
+        "complete": false
+      }
+    }
+  ]
+}

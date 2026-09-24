@@ -1,0 +1,5 @@
+{
+  "callTimeoutSeconds": 120,
+  "logs": { "docker": "amcp-app" },
+  "postgres": { "docker": "amcp-postgres", "user": "amcp", "db": "anythingmcp" }
+}

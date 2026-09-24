@@ -1,0 +1,5 @@
+node_modules/
+.codebound/
+codebound-report.json
+codebound.team.json
+.DS_Store

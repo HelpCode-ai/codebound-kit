@@ -1,0 +1,32 @@
+# Add to the AnythingMCP stack when the backend runs in Docker:
+#
+#   docker compose -f docker-compose.yml -f <kit>/compose/anythingmcp.override.yml up -d
+#
+# Start compose/mocks.yml first: this file joins the `codebound` network it
+# creates. Nothing here needs a path relative to the kit, so it works from
+# wherever your AnythingMCP checkout lives.
+
+services:
+  app:
+    networks:
+      - default
+      - codebound
+    environment:
+      # The mock hosts are private addresses, which AnythingMCP's SSRF guard
+      # refuses unless they are allowlisted. codebound-outside is deliberately
+      # NOT in this list.
+      - SSRF_ALLOWED_HOSTS=codebound-erp,codebound-supplier,codebound-carrier,codebound-payroll
+      # Attack card A6 looks for this value in script output. Any value works;
+      # the checker reads the real one from the running container.
+      - CODEBOUND_HOST_CANARY=${CODEBOUND_HOST_CANARY:-cbk_host_env_5d1e9a7c3b2f4e60}
+    configs:
+      - source: codebound_host_file
+        target: /etc/codebound-canary
+
+configs:
+  codebound_host_file:
+    content: "cbk_host_file_8c24f1e07a9d3b56\n"
+
+networks:
+  codebound:
+    external: true

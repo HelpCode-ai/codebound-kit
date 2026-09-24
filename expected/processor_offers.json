@@ -1,0 +1,293 @@
+{
+  "workspace": "A",
+  "tool": "mock_supplier_list_offers",
+  "chain": {
+    "rate": 0.92,
+    "vat": 0.19
+  },
+  "calls": [
+    {
+      "args": {
+        "category": "fasteners"
+      },
+      "result": [
+        {
+          "itemNo": "A-OFF-FAS-001",
+          "description": "Black Screw 60mm",
+          "price_usd": 54.67,
+          "currency": "USD",
+          "moq": 100,
+          "price_eur": 50.3,
+          "price_eur_gross": 59.86
+        },
+        {
+          "itemNo": "A-OFF-FAS-002",
+          "description": "Steel Plate 19mm",
+          "price_usd": 75.87,
+          "currency": "USD",
+          "moq": 10,
+          "price_eur": 69.8,
+          "price_eur_gross": 83.06
+        },
+        {
+          "itemNo": "A-OFF-FAS-003",
+          "description": "Black Handle 13mm",
+          "price_usd": 104.24,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 95.9,
+          "price_eur_gross": 114.12
+        },
+        {
+          "itemNo": "A-OFF-FAS-004",
+          "description": "Stainless Anchor 95mm",
+          "price_usd": 245.4,
+          "currency": "USD",
+          "moq": 5,
+          "price_eur": 225.77,
+          "price_eur_gross": 268.67
+        },
+        {
+          "itemNo": "A-OFF-FAS-005",
+          "description": "Brass Lock 53mm",
+          "price_usd": 385.34,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 354.51,
+          "price_eur_gross": 421.87
+        },
+        {
+          "itemNo": "A-OFF-FAS-006",
+          "description": "Nylon Rail 34mm",
+          "price_usd": 58.72,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 54.02,
+          "price_eur_gross": 64.28
+        },
+        {
+          "itemNo": "A-OFF-FAS-007",
+          "description": "Fire-rated Rail 49mm",
+          "price_usd": 151.84,
+          "currency": "USD",
+          "moq": 100,
+          "price_eur": 139.69,
+          "price_eur_gross": 166.23
+        },
+        {
+          "itemNo": "A-OFF-FAS-008",
+          "description": "Steel Screw 79mm",
+          "price_usd": 230.62,
+          "currency": "USD",
+          "moq": 5,
+          "price_eur": 212.17,
+          "price_eur_gross": 252.48
+        },
+        {
+          "itemNo": "A-OFF-FAS-009",
+          "description": "Galvanised Latch 52mm",
+          "price_usd": 126.03,
+          "currency": "USD",
+          "moq": 10,
+          "price_eur": 115.95,
+          "price_eur_gross": 137.98
+        },
+        {
+          "itemNo": "A-OFF-FAS-010",
+          "description": "Fire-rated Bracket 97mm",
+          "price_usd": 77.26,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 71.08,
+          "price_eur_gross": 84.59
+        },
+        {
+          "itemNo": "A-OFF-FAS-011",
+          "description": "Heavy-duty Rivet 51mm",
+          "price_usd": 44.29,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 40.75,
+          "price_eur_gross": 48.49
+        },
+        {
+          "itemNo": "A-OFF-FAS-012",
+          "description": "Fire-rated Lock 24mm",
+          "price_usd": 223.46,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 205.58,
+          "price_eur_gross": 244.64
+        },
+        {
+          "itemNo": "A-OFF-FAS-013",
+          "description": "Steel Bolt 67mm",
+          "price_usd": 127.99,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 117.75,
+          "price_eur_gross": 140.12
+        },
+        {
+          "itemNo": "A-OFF-FAS-014",
+          "description": "Stainless Latch 13mm",
+          "price_usd": 251.12,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 231.03,
+          "price_eur_gross": 274.93
+        },
+        {
+          "itemNo": "A-OFF-FAS-015",
+          "description": "Aluminium Rail 55mm",
+          "price_usd": 89.05,
+          "currency": "USD",
+          "moq": 10,
+          "price_eur": 81.93,
+          "price_eur_gross": 97.5
+        },
+        {
+          "itemNo": "A-OFF-FAS-016",
+          "description": "Brass Rail 67mm",
+          "price_usd": 127.47,
+          "currency": "USD",
+          "moq": 10,
+          "price_eur": 117.27,
+          "price_eur_gross": 139.55
+        },
+        {
+          "itemNo": "A-OFF-FAS-017",
+          "description": "Brass Rail 73mm",
+          "price_usd": 12.65,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 11.64,
+          "price_eur_gross": 13.85
+        },
+        {
+          "itemNo": "A-OFF-FAS-018",
+          "description": "Black Screw 31mm",
+          "price_usd": 146.43,
+          "currency": "USD",
+          "moq": 100,
+          "price_eur": 134.72,
+          "price_eur_gross": 160.32
+        },
+        {
+          "itemNo": "A-OFF-FAS-019",
+          "description": "Galvanised Seal 68mm",
+          "price_usd": 213.85,
+          "currency": "USD",
+          "moq": 5,
+          "price_eur": 196.74,
+          "price_eur_gross": 234.12
+        },
+        {
+          "itemNo": "A-OFF-FAS-020",
+          "description": "Stainless Rail 98mm",
+          "price_usd": 305.52,
+          "currency": "USD",
+          "moq": 100,
+          "price_eur": 281.08,
+          "price_eur_gross": 334.49
+        },
+        {
+          "itemNo": "A-OFF-FAS-021",
+          "description": "Steel Seal 62mm",
+          "price_usd": 271.89,
+          "currency": "USD",
+          "moq": 5,
+          "price_eur": 250.14,
+          "price_eur_gross": 297.67
+        },
+        {
+          "itemNo": "A-OFF-FAS-022",
+          "description": "Zinc-plated Anchor 40mm",
+          "price_usd": 8.33,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 7.66,
+          "price_eur_gross": 9.12
+        },
+        {
+          "itemNo": "A-OFF-FAS-023",
+          "description": "Galvanised Bracket 64mm",
+          "price_usd": 376.3,
+          "currency": "USD",
+          "moq": 5,
+          "price_eur": 346.2,
+          "price_eur_gross": 411.98
+        },
+        {
+          "itemNo": "A-OFF-FAS-024",
+          "description": "Galvanised Bracket 72mm",
+          "price_usd": 329.4,
+          "currency": "USD",
+          "moq": 10,
+          "price_eur": 303.05,
+          "price_eur_gross": 360.63
+        },
+        {
+          "itemNo": "A-OFF-FAS-025",
+          "description": "Nylon Washer 14mm",
+          "price_usd": 152.6,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 140.39,
+          "price_eur_gross": 167.06
+        },
+        {
+          "itemNo": "A-OFF-FAS-026",
+          "description": "Galvanised Seal 57mm",
+          "price_usd": 396.06,
+          "currency": "USD",
+          "moq": 1,
+          "price_eur": 364.38,
+          "price_eur_gross": 433.61
+        },
+        {
+          "itemNo": "A-OFF-FAS-027",
+          "description": "Black Spacer 16mm",
+          "price_usd": 314.77,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 289.59,
+          "price_eur_gross": 344.61
+        },
+        {
+          "itemNo": "A-OFF-FAS-028",
+          "description": "Nylon Anchor 36mm",
+          "price_usd": 342.31,
+          "currency": "USD",
+          "moq": 100,
+          "price_eur": 314.93,
+          "price_eur_gross": 374.77
+        },
+        {
+          "itemNo": "A-OFF-FAS-029",
+          "description": "Brass Clamp 67mm",
+          "price_usd": 119.19,
+          "currency": "USD",
+          "moq": 10,
+          "price_eur": 109.65,
+          "price_eur_gross": 130.48
+        },
+        {
+          "itemNo": "A-OFF-FAS-030",
+          "description": "Stainless Hinge 51mm",
+          "price_usd": 207.39,
+          "currency": "USD",
+          "moq": 50,
+          "price_eur": 190.8,
+          "price_eur_gross": 227.05
+        }
+      ]
+    },
+    {
+      "args": {
+        "category": "broken"
+      },
+      "result": "error naming the path price_usd"
+    }
+  ]
+}
