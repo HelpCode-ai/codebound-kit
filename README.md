@@ -1,8 +1,10 @@
 # CODEBOUND kit
 
-Test kit for **CODEBOUND**, the AnythingMCP challenge at the Black Forest Hackathon 2026 (KOCH Freiburg GmbH, Offenburg, 16–18 October).
+Test kit for **CODEBOUND: Safe Script Sandbox for AI Agents in AnythingMCP**, the AnythingMCP challenge at the Black Forest Hackathon 2026 (KOCH Freiburg GmbH, Offenburg, 16–18 October).
 
-You are building code that runs next to the data, inside [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp), in a sandbox that sees exactly one workspace and nothing else. Three levels: **processor chains** that reshape a tool's answer before the model sees it, **scripts** that call the workspace's tools and return four rows instead of four hundred, and **scripts with secrets** that make direct calls with injected credentials. This kit gives you something to build against and a way to know it works:
+Today every intermediate result an AI agent works with travels back through the model. In production one tool call in eight returns more than 50 KB, the largest 44 MB, so multi-step jobs end up slow, expensive or done by hand. The way out is to let the agent send a small script to where the data lives and get the answer back instead of the raw data.
+
+You are building code that runs next to the data, inside [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp), in a sandbox that sees exactly one workspace and nothing else. Three levels: **processor chains** that reshape a tool's answer before the model sees it, **scripts** that call the workspace's tools and return four rows instead of four hundred, and **scripts with secrets** that make direct calls with injected credentials, to the hosts of the workspace's own connectors and nowhere else. This kit gives you something to build against and a way to know it works:
 
 - **Four mock systems** (ERP, Supplier, Carrier, Payroll) with fixed data, plus one host no script may reach.
 - **A setup command** that turns a fresh AnythingMCP into two workspaces, three users, roles and MCP keys, and proves the unmodified gateway behaves before you touch it.
