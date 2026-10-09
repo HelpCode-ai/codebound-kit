@@ -1,10 +1,18 @@
+<p align="center"><img src="assets/banner.png" alt="CODEBOUND: Safe Script Sandbox for AI Agents in AnythingMCP. Black Forest Hackathon, Offenburg, 16 to 18 October 2026. A challenge by KOCH, helpcode.ai and AnythingMCP." width="100%"></p>
+
 # CODEBOUND kit
 
 Test kit for **CODEBOUND: Safe Script Sandbox for AI Agents in AnythingMCP**, the AnythingMCP challenge at the Black Forest Hackathon 2026 (KOCH Freiburg GmbH, Offenburg, 16–18 October).
 
 Today every intermediate result an AI agent works with travels back through the model. In production one tool call in eight returns more than 50 KB, the largest 44 MB, so multi-step jobs end up slow, expensive or done by hand. The way out is to let the agent send a small script to where the data lives and get the answer back instead of the raw data.
 
-You are building code that runs next to the data, inside [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp), in a sandbox that sees exactly one workspace and nothing else. Three levels: **processor chains** that reshape a tool's answer before the model sees it, **scripts** that call the workspace's tools and return four rows instead of four hundred, and **scripts with secrets** that make direct calls with injected credentials, to the hosts of the workspace's own connectors and nowhere else. This kit gives you something to build against and a way to know it works:
+<img src="assets/problem.png" alt="1 in 8 tool calls in production return more than 50 KB; the largest answer was 44 MB; price_drift_check turns 450 articles into the 4 rows the agent needs." width="100%">
+
+You are building code that runs next to the data, inside [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp), in a sandbox that sees exactly one workspace and nothing else. Three levels: **processor chains** that reshape a tool's answer before the model sees it, **scripts** that call the workspace's tools and return four rows instead of four hundred, and **scripts with secrets** that make direct calls with injected credentials, to the hosts of the workspace's own connectors and nowhere else.
+
+<img src="assets/levels.png" alt="One sandbox, three levels of trust: Level 1 processor chains (Must, checks P1 and P2), Level 2 scripts (Must, F1 to F4), Level 3 scripts with secrets (Should, F5). Secret scans S1 to S3 and attack cards A1 to A13 on every level." width="100%">
+
+This kit gives you something to build against and a way to know it works:
 
 - **Four mock systems** (ERP, Supplier, Carrier, Payroll) with fixed data, plus one host no script may reach.
 - **A setup command** that turns a fresh AnythingMCP into two workspaces, three users, roles and MCP keys, and proves the unmodified gateway behaves before you touch it.
@@ -88,4 +96,10 @@ Something in the kit is broken or unclear: open an issue in this repository, wit
 
 `npm test` checks that `expected/` matches the reference answers. `test/fake-team.mjs` is a fake team used to test the checker: the chain and four scripts running in a plain Node process, no sandbox, not a model answer.
 
+The images in this README come from `assets/src/render.mjs` (Chrome and ImageMagick).
+
 AGPL-3.0, like AnythingMCP.
+
+---
+
+<p align="center"><a href="https://hackathon.badencampus.de/de/hackathons"><img src="assets/partners.png" alt="Black Forest Hackathon. KOCH, helpcode.ai, AnythingMCP." width="100%"></a></p>
