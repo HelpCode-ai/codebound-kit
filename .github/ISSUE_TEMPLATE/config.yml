@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: AnythingMCP itself
+    url: https://github.com/HelpCode-ai/anythingmcp
+    about: Bugs and questions about the platform go to the main repository.

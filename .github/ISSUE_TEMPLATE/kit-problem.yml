@@ -1,0 +1,20 @@
+name: Problem with the kit
+description: setup, check, the mocks or the expected results don't behave as the README says
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command you ran and its output. Leave out passwords and MCP keys.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: input
+    id: env
+    attributes:
+      label: Setup
+      description: "--mode docker or host, OS, Node version, AnythingMCP commit"

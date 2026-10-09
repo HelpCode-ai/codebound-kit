@@ -18,8 +18,11 @@ Node 20 or newer and Docker. No `npm install`: the kit has no dependencies.
 # 1. The mock systems
 npm run mocks
 
-# 2. AnythingMCP, from your fork. Either the backend in Docker:
-docker compose -f docker-compose.yml -f <path-to-kit>/compose/anythingmcp.override.yml up -d
+# 2. AnythingMCP, from your fork. Either the backend in Docker, built from
+#    your code (--build; without it Docker runs the published image) and with
+#    real secrets in .env (the backend refuses to start on the defaults):
+printf 'JWT_SECRET=%s\nENCRYPTION_KEY=%s\n' "$(openssl rand -hex 32)" "$(openssl rand -hex 32)" > .env
+docker compose -f docker-compose.yml -f <path-to-kit>/compose/anythingmcp.override.yml up -d --build
 #    or the backend with hot reload (npm run dev), started with
 #    SSRF_ALLOWED_HOSTS=localhost so it may call the mocks on localhost.
 
@@ -74,6 +77,10 @@ Endpoints: `mocks/server.mjs`. Data: `mocks/data.mjs`, generated from a fixed se
 ## Starting over
 
 The setup expects an empty database. To reset: `docker compose down -v` on the AnythingMCP stack, `npm run mocks:down && npm run mocks`, `rm -rf .codebound`, then setup again.
+
+## Questions and problems
+
+Something in the kit is broken or unclear: open an issue in this repository, with the command you ran and its output (remove the passwords and keys from `.codebound/` first). Questions about AnythingMCP itself, the challenge or your idea: ask the KOCH team on site.
 
 ## For the kit itself
 
