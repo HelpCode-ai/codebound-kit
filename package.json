@@ -13,6 +13,6 @@
     "check": "node harness/cli.mjs check",
     "cards": "node harness/cli.mjs cards",
     "expected": "node scripts/generate-expected.mjs",
-    "test": "node --test \"test/*.test.mjs\""
+    "test": "node --test test/checks.test.mjs test/expected.test.mjs"
   }
 }
